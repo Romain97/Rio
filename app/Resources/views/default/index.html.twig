@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Connexion</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                      <div class="form-group">
+                                        <label for="usr">Name:</label>
+                                        <input type="text" class="form-control" id="usr">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                  </div>
+    
+    <div class="row index_section1">
+    <div class="index_section1_photo">
+  </div>
+    </div>
+
+
+    
+
+    <div class="row index_section3_activites">
+      <p class="accroche">Prochaines Épreuves :</p>
+      <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+        <div class="row">
+          <div class="formation_photo col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <img src="{{ asset('../web/images/nageur.jpg') }}" alt="rio" class="img-responsive" />
+            
+            
+          </div>
+          <div class="coaching_photo col-lg-4 col-md-4 col-sm-12 col-xs-12"> 
+            <img src="{{ asset('../web/images/escrime.jpg') }}" alt="rio" class="img-responsive" />
+            </a> 
+            
+          </div>
+          <div class="atelier_photo col-lg-4 col-md-4 col-sm-12 col-xs-12"> 
+            <img src="{{ asset('../web/images/golf.jpg') }}" alt="rio" class="img-responsive" />
+            </a> 
+            
+          </div>
+             
+
+          {% for epreuve in epreuves %}
+            <div class=" col-lg-4 epreuve">
+              <div class=" col-lg-6">
+                  <h2>{{ epreuve.title }} </h2>
+                  <p> {{epreuve.description}}
+              </div>
+                <div class=" col-lg-6">
+            
+            
+                </div>
+            </div>
+          
+
+          {% endfor %}
+            
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="row index_section4_blog">
+      <div class=" col-lg-3 ">
+        <iframe width="610" height="400"src="https://www.youtube.com/embed/LfyjAZmN63Y"></iframe> 
+      </div>
+      <div class="blog1 col-lg-offset-3 col-lg-6 col-lg-offset-3 ">
+        <p> Il a été emmené sur une civière. Plusieurs membres de la délégation française étaient abattus, certains les larmes aux yeux.
+
+Aït-Saïd était la principale chance de médaille chez l'équipe de France masculine, dans la spécialité des anneaux.
+
+En début d'après-midi, avec une note de 15.533, il était troisième au classement des anneaux derrière le champion du monde en titre, le Grec Eleftherios Petrounias (15.833) et le champion olympique de 2012, le Brésilien Arthur Zanetti (15.533 comme le Français mais avec une meilleure note que lui en exécution).Philippe Rozier remplaçant. Le petit alezan souffre d'une fêlure de la pointe du jarret, probablement la conséquence d'un coup qu'il s'est donné au box à Deodoro dans la nuit de lundi à mardi, précise le communiqué de la FFE. Avec celui composé par Pénélope Leprévost/Flora de Mariposa, le couple Delestre/Ryan des Hayettes Hermès, habitué aux doubles sans faute ces derniers mois, était le fer de lance de l'équipe de France de saut d'obstacles. Désigné remplaçant, Philippe Rozier est titularisé sur Rahotep de Toscane.</p>
+          
+        </div>
+      </div>
+
+    <div class="row index_section2_presentation">
+        <div class="bloc_photo col-md-12">
+            <div class="col-md-offset-2 col-md-3 reseauindex">
+        
+                <img src="{{ asset('../web/images/facebook.png') }}" alt="rio" class="" />
+            </div>
+
+                <div class="col-md-offset-1 col-md-3 reseau">
+                
+                     <img src="{{ asset('../web/images/twitter.png') }}" alt="rio" class="" />
+                </div>
+                    <div class="col-md-offset-1 col-md-3 reseau">
+                
+                        <img src="{{ asset('../web/images/googleplus.png') }}" alt="rio" class="" />
+                    </div>
+                    
+         </div>
+      
+    </div>
+  
+ 
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Athlete creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <select name="orga" id="orga">
+                    {% for epreuve in epreuves %}
+                        <option value="{{ epreuve.title }}">{{ epreuve.title }}</option>
+                    {% endfor %}
+                </select>
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+<p> PS :impossible de lier l'epreuve a l'athlete : NULL en base de donnée :/ </p>
+    <ul>
+        <li>
+            <a href="{{ path('athlete_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

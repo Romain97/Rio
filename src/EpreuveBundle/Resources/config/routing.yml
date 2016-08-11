@@ -1,0 +1,15 @@
+epreuve_epreuve:
+    resource: "@EpreuveBundle/Resources/config/routing/epreuve.yml"
+    prefix:   /epreuve
+
+epreuve_athlete:
+        resource: "@EpreuveBundle/Resources/config/routing/athlete.yml"
+        prefix:   /athlete
+
+
+# epreuve_homepage:
+#     path:     /
+#     defaults: { _controller: EpreuveBundle:Default:index }
+index:
+    path:     /
+    defaults: { _controller: EpreuveBundle:Epreuve:index }

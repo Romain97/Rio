@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('index') }}"> <h3> < Retour</h3> </a>
+
+    <div class="row pageepreuve">
+      
+        <div class="blog1 col-lg-offset-3 col-lg-6 col-lg-offset-3 ">
+        
+          
+        </div>
+    </div>
+    
+            <div class="blog1 col-lg-offset-3 col-lg-6 ">
+              
+                <h2>{{ epreuve.title }} : {{epreuve.description}}</h2>
+
+            </div>
+
+          {% for athlete in athletes %}
+            <div class=" col-lg-4 epreuve">
+              <div class=" col-lg-6">
+                  <h2>{{ athlete.name }} </h2>
+                  
+              </div>
+                <div class=" col-lg-6">
+            
+            
+                </div>
+            </div>
+          
+
+          {% endfor %}
+    <ul>
+        <li>
+            <a href="{{ path('epreuve_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('epreuve_edit', { 'id': epreuve.id }) }}">Edit</a>
+        </li>
+        <li>
+            {# {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li> #}
+    </ul>
+{% endblock %}
